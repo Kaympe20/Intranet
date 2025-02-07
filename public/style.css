@@ -7,7 +7,6 @@ html,body {
 
 .title {
     font-size: 4.5em;
-    color: white;
     font-family: Poetsen One;
     font-weight: 100;
     margin-bottom: -10px;
@@ -15,14 +14,42 @@ html,body {
 
 .card {
     width: 50vw;
-    min-height: 60vh;
-    background-color: #A93F55B3;
+    min-height: 40vh;
+    background-color: #DDFCADE6;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3em;
     text-align: center;
-    color: white;
-    padding: 0 2em 2em 2em;
+    color: #754F44;
+    padding: 0.25em 2em 2em 2em;
+}
+
+.card div ol li {
+    font-size: x-large;
+    margin-bottom: 1.5em;
+}
+
+.checkmarks {
+    list-style: none;
+    font-size: 1.5em;
+}
+
+.card .checkmarks li {
+    margin-bottom: 2em; /* Add this line */
+}
+
+.checkmarks li {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.checkmarks li::before {
+    content: "\2713";
+    width: 10px;
+    margin-left: -10px;
+    margin-right: 0.8em;
+    float: left;
 }
 
 .card .grid {
@@ -31,16 +58,32 @@ html,body {
     align-items: center; 
 }
 
-.card .grid ol li {
+.card ol li {
     margin-bottom: 10px;
     text-align: left;
 }
 
-.card .grid img {
-    float: right;
-    width: 30vw;
-    margin-left: 0.5em;
+.card .grid img, .card .grid .grid-element {
     border-radius: 50px;
+    width: 30vw;
+}
+
+.card:nth-child(even) {
+    background-color: #D9DBF1E6;
+}
+
+.card:nth-child(odd) .grid img, .card:nth-child(odd) .grid .grid-element {
+    float: right;
+    margin-left: 0.5em;
+}
+
+.card:nth-child(even) .grid img, .card:nth-child(even) .grid .grid-element {
+    float: left;
+    margin-right: 0.5em;
+}
+
+.card:nth-child(1) {
+    padding-top: initial;
 }
 
 .card p {
@@ -51,7 +94,7 @@ html,body {
 
 .mountains {
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 100%;
     left: 0;
     z-index: 0;
@@ -64,4 +107,8 @@ html,body {
 .content {
     position: relative;
     z-index: 1;
+}
+
+h2 {
+    font-size: 3em;
 }
