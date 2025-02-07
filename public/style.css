@@ -2,6 +2,7 @@
 
 html, body {
     background-image: url("https://www.wvnstv.com/wp-content/uploads/sites/76/2023/03/GettyImages-846010444.jpg?w=2560&h=1440&crop=1");
+    background-attachment: fixed;
     margin: 0;
     text-align: center;
     font-family: Comfortaa;
