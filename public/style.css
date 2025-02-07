@@ -1,8 +1,12 @@
-html,body {
+html, body {
     background-color: #53917E;
     margin: 0;
     text-align: center;
     font-family: Comfortaa;
+}
+
+h2 {
+    font-size: 3em;
 }
 
 .title {
@@ -30,37 +34,10 @@ html,body {
     margin-bottom: 1.5em;
 }
 
-.checkmarks {
-    list-style: none;
-    font-size: 1.5em;
-}
-
-.card .checkmarks li {
-    margin-bottom: 2em; /* Add this line */
-}
-
-.checkmarks li {
-    margin-left: 20px;
-    padding-left: 10px;
-}
-
-.checkmarks li::before {
-    content: "\2713";
-    width: 10px;
-    margin-left: -10px;
-    margin-right: 0.8em;
-    float: left;
-}
-
 .card .grid {
     display: flex;
     justify-content: space-around;
-    align-items: center; 
-}
-
-.card ol li {
-    margin-bottom: 10px;
-    text-align: left;
+    align-items: center;
 }
 
 .card .grid img, .card .grid .grid-element {
@@ -86,10 +63,37 @@ html,body {
     padding-top: initial;
 }
 
+.card ol li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 .card p {
     font-family: Lato;
     font-size: 1.5em;
     font-weight: 500;
+}
+
+.checkmarks {
+    list-style: none;
+    font-size: 1.5em;
+}
+
+.checkmarks li {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.checkmarks li::before {
+    content: "\2713";
+    width: 10px;
+    margin-left: -10px;
+    margin-right: 0.8em;
+    float: left;
+}
+
+.card .checkmarks li {
+    margin-bottom: 2em;
 }
 
 .mountains {
@@ -107,8 +111,4 @@ html,body {
 .content {
     position: relative;
     z-index: 1;
-}
-
-h2 {
-    font-size: 3em;
 }
