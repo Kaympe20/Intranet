@@ -218,3 +218,8 @@ body, html {
         max-width: 140px; /* Adjust label width for smaller photos */
     }
 }
+
+.steps-list {
+    margin: 0 auto 5vh;
+    padding: 0 130px;
+}
