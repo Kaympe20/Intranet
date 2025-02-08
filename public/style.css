@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+@media (max-width: 768px) {
+    .card .grid {
+        flex-direction: column;
+    }
+
+    .card .grid img, .card .grid .grid-element {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card .grid img {
+        height: auto;
+    }
+}
+
 html, body {
     background-image: url("https://www.wvnstv.com/wp-content/uploads/sites/76/2023/03/GettyImages-846010444.jpg?w=2560&h=1440&crop=1");
     background-attachment: fixed;
+    background-size: cover;
     margin: 0;
     text-align: center;
     font-family: Comfortaa;
@@ -83,7 +99,6 @@ h2 {
 }
 
 .checkmarks li {
-    margin-left: 20px;
     padding-left: 10px;
 }
 
