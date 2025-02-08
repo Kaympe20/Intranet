@@ -29,8 +29,8 @@ body, html {
     width: 130px;
     height: 100%;
     background: 
-    url('./assets/leaf1.png') repeat-y center/contain,
-    url('./assets/leaf2.png') repeat-y center/contain;
+    url('assets/leaf1.png') repeat-y center/contain,
+    url('assets/leaf2.png') repeat-y center/contain;
     background-position: 0 0, 0 100px;
     background-size: contain;
     z-index: 0;
@@ -147,19 +147,19 @@ body, html {
 }
 
 .photo:nth-child(1)::after {
-    background-image: url('./assets/IMG_2185.jpg'); 
+    background-image: url('assets/IMG_2185.jpg'); 
     background-size: cover; 
     background-position: center top;
 }
 
 .photo:nth-child(2)::after {
-    background-image: url('./assets/philmont.JPEG'); 
+    background-image: url('assets/philmont.JPEG'); 
     background-size: cover; 
     background-position: center top;
 }
 
 .photo:nth-child(3)::after {
-    background-image: url('./assets/trail.png');
+    background-image: url('assets/trail.png');
     background-size: cover;;
 }
 

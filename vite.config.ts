@@ -4,6 +4,7 @@ import cssnano from 'cssnano';
 import discardUnused from 'postcss-discard-unused';
 import colormin from 'postcss-colormin';
 import discardDuplicates from 'postcss-discard-duplicates';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
     css: {
@@ -21,6 +22,14 @@ export default defineConfig({
     },
     plugins: [
         tailwindcss(),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'assets/*',
+                    dest: 'assets'
+                }
+            ]
+        })
     ],
     base: '/',
 })
