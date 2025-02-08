@@ -24,11 +24,12 @@ export default defineConfig({
     build: {
         cssMinify: 'lightningcss',
         cssCodeSplit: true,
+        minify: true,
     },
     css: {
         transformer: 'lightningcss',
         lightningcss: {
-            targets: browserslistToTargets(browserslist('>= 0.25%'))
+            targets: browserslistToTargets(browserslist('>= 0.25%')),
         }
     }
 })
