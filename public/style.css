@@ -91,16 +91,19 @@ body, html {
     width: 100%;
     margin: 5vh auto;
     position: relative;
-    background-image: url('assets/log.svg');
-    background-size: contain;
+    background-image: url('https://media.istockphoto.com/id/472321898/photo/empty-cork-notice-board-texture-and-background.jpg?s=612x612&w=0&k=20&c=7KXzdbAfFyA8W1D4csmuBAZe_XFDSoERk8ayS8jxZtw=');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
-    min-height: 50vh; /* Ensure the container has a minimum height */
+    min-height: 40vh; /* Ensure the container has a minimum height */
+    border-radius: 15px; /* Add rounded corners */
+    border: 5px solid #6d412a; /* Add a border */
 }
 
-.photo {
-    position: relative; /* Ensure the label is positioned relative to the photo */
+.photo-container a {
+    display: inline-block;
+    position: relative;
     width: 200px;
     height: 220px;
     background: white;
@@ -109,21 +112,22 @@ body, html {
     transition: all 0.5s ease-out;
     will-change: transform;
     z-index: 2;
+    text-decoration: none; /* Remove underline from links */
 }
 
-.photo::before {
+.photo-container a::before {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 60px;
-    background: #b08231;
-    top: -30px;
+    width: 20px; /* Adjusted width for pushpin */
+    height: 20px; /* Adjusted height for pushpin */
+    background: #b03131;
+    top: -10px; /* Adjusted position for pushpin */
     left: 50%;
     transform: translateX(-50%);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    clip-path: circle(50%); /* Changed to circular shape for pushpin */
 }
 
-.photo::after {
+.photo-container a::after {
     content: '';
     display: block;
     width: 100%;
@@ -131,42 +135,40 @@ body, html {
     background: #000;
 }
 
-.photo:nth-child(1) {
+.photo-container a:nth-child(1) {
     transform: rotate(-5deg) translateY(0);
     background-size: cover; 
 }
 
-.photo:nth-child(2) {
+.photo-container a:nth-child(2) {
     transform: rotate(2deg) translateY(20px);
     background-size: cover; 
 }
 
-.photo:nth-child(3) {
+.photo-container a:nth-child(3) {
     transform: rotate(3deg) translateY(0);
     background-size: cover; 
 }
 
-.photo:nth-child(1)::after {
+.photo-container a:nth-child(1)::after {
     background-image: url('assets/IMG_2185.jpg'); 
     background-size: cover; 
     background-position: center top;
 }
 
-.photo:nth-child(2)::after {
+.photo-container a:nth-child(2)::after {
     background-image: url('assets/philmont.JPEG'); 
     background-size: cover; 
     background-position: center top;
 }
 
-.photo:nth-child(3)::after {
+.photo-container a:nth-child(3)::after {
     background-image: url('assets/trail.png');
-    background-size: cover;;
+    background-size: cover;
 }
 
-.photo:hover {
+.photo-container a:hover {
     transform: translateY(-8px) rotate(0deg) scale(1.02);
-    z-index: 1;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .photo:nth-child(1):hover {
@@ -222,4 +224,10 @@ body, html {
 .steps-list {
     margin: 0 auto 5vh;
     padding: 0 130px;
+    width: fit-content;
+}
+
+.steps-list li {
+    margin-bottom: 1.5em;
+    padding-left: 50px;
 }
