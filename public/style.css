@@ -168,19 +168,19 @@ body, html {
 }
 
 .photo-container a:hover {
-    transform: translateY(-8px) rotate(0deg) scale(1.02);
+    transform: none;
 }
 
 .photo:nth-child(1):hover {
-    transform: translateY(-8px) rotate(-2deg) scale(1.02);
+    transform: none;
 }
 
 .photo:nth-child(2):hover {
-    transform: translateY(-8px) rotate(0deg) scale(1.02);
+    transform: none;
 }
 
 .photo:nth-child(3):hover {
-    transform: translateY(-8px) rotate(1deg) scale(1.02);
+    transform: none;
 }
 
 .photo-label {
