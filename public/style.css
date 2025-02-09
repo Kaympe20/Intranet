@@ -163,8 +163,9 @@ body, html {
 }
 
 .photo-container a:nth-child(3)::after {
-    background-image: url('assets/trail.png');
+    background-image: url('assets/Scrapyard NoVA.png');
     background-size: cover;
+    background-position: center top;
 }
 
 .photo-container a:hover {
