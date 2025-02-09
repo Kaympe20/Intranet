@@ -34,7 +34,7 @@ export default defineConfig({
             input: {
                 index: resolve(__dirname, 'index.html'),
                 steps: resolve(__dirname, 'steps.html'),
-          },
+            },
     },
 
     },
