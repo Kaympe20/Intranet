@@ -1,26 +1,35 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
-import cssnano from 'cssnano';
-import discardUnused from 'postcss-discard-unused';
-import colormin from 'postcss-colormin';
-import discardDuplicates from 'postcss-discard-duplicates';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+import lightningcss from 'vite-plugin-lightningcss'
+import browserslist from 'browserslist'
+import { browserslistToTargets } from 'lightningcss'
 
 export default defineConfig({
-    css: {
-        postcss: {
-            plugins: [
-                cssnano({
-                    plugins: [
-                        discardUnused,
-                        colormin,
-                        discardDuplicates
-                    ]
-                })
-            ]
-        }
-    },
     plugins: [
         tailwindcss(),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'assets/*',
+                    dest: 'assets'
+                }
+            ]
+        }),
+        lightningcss({
+            browserslist: "last 2 versions",
+        }),
     ],
     base: '/',
+    build: {
+        cssMinify: 'lightningcss',
+        cssCodeSplit: true,
+        minify: true,
+    },
+    css: {
+        transformer: 'lightningcss',
+        lightningcss: {
+            targets: browserslistToTargets(browserslist('>= 0.25%')),
+        }
+    }
 })
