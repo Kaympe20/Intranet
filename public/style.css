@@ -260,3 +260,28 @@ button {
     font-family: Lato;
     font-weight: 600;
 }
+
+.video-container {
+    margin: 10vh auto 5vh;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    background-image: url('https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjA0NDczMjMvNzBlNTA5MjAyM2YwYzZhYmE2YjkyOWVkYTdiOGUxYjMuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    border: 5px solid #2a6d31;
+    text-align: center;
+    color: white;
+}
+
+.video-container h2 {
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.video-container iframe {
+    width: 60%;
+    height: 60vh;
+}
