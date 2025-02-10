@@ -131,19 +131,19 @@ body, html {
     transition: all 0.5s ease-out;
     will-change: transform;
     z-index: 2;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
 }
 
 .photo-container a::before {
     content: '';
     position: absolute;
-    width: 20px; /* Adjusted width for pushpin */
-    height: 20px; /* Adjusted height for pushpin */
+    width: 20px; 
+    height: 20px; 
     background: #b03131;
-    top: -10px; /* Adjusted position for pushpin */
+    top: -10px; 
     left: 50%;
     transform: translateX(-50%);
-    clip-path: circle(50%); /* Changed to circular shape for pushpin */
+    clip-path: circle(50%); 
 }
 
 .photo-container a::after {
@@ -227,17 +227,17 @@ body, html {
         bottom: 5px;
     }
     .photo {
-        width: 150px;  /* Smaller width */
-        height: 165px; /* Maintain aspect ratio */
+        width: 150px; 
+        height: 165px; 
     }
     
     .photo-container {
-        gap: 20px; /* Reduce gap between photos */
+        gap: 20px;
     }
 
     .photo-label {
         font-size: 0.75em;
-        max-width: 140px; /* Adjust label width for smaller photos */
+        max-width: 140px;
     }
 }
 
