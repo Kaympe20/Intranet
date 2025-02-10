@@ -283,5 +283,5 @@ button {
 
 .video-container iframe {
     width: 60%;
-    height: 60vh;
+    aspect-ratio: 16 / 9;
 }
