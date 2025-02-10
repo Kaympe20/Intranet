@@ -226,10 +226,6 @@ body, html {
         padding: 4px 6px;
         bottom: 5px;
     }
-    .photo {
-        width: 150px; 
-        height: 165px; 
-    }
     
     .photo-container {
         gap: 20px;
