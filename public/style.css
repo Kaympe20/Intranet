@@ -91,14 +91,33 @@ body, html {
     width: 100%;
     margin: 5vh auto;
     position: relative;
+    z-index: 1;
+    min-height: 40vh;
+    border-radius: 15px;
+}
+
+.bulletin-container {
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 5vh auto;
+    position: relative;
     background-image: url('https://media.istockphoto.com/id/472321898/photo/empty-cork-notice-board-texture-and-background.jpg?s=612x612&w=0&k=20&c=7KXzdbAfFyA8W1D4csmuBAZe_XFDSoERk8ayS8jxZtw=');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 1;
-    min-height: 40vh; /* Ensure the container has a minimum height */
-    border-radius: 15px; /* Add rounded corners */
-    border: 5px solid #6d412a; /* Add a border */
+    z-index: 2;
+    min-height: 40vh;
+    border-radius: 15px;
+    border: 5px solid #6d412a;
+}
+
+.bulletin-container h2 {
+    color: white;
+    font-weight: 700;
+    font-family: Lato;
 }
 
 .photo-container a {
