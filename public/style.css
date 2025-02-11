@@ -262,7 +262,7 @@ button {
 }
 
 .video-container {
-    margin: 10vh auto 5vh;
+    margin: 10vh 5vw 5vh 5vw;
     padding: 20px;
     max-width: 1200px;
     max-width: 100%;
