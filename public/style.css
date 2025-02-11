@@ -240,8 +240,8 @@ body, html {
 
 .steps-list {
     margin: 0 auto 5vh;
-    padding: 0 130px;
-    width: fit-content;
+    padding: 0 50px;
+    width: 90%;
 }
 
 .steps-list li {
