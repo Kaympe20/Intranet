@@ -285,3 +285,13 @@ button {
     width: 60%;
     aspect-ratio: 16 / 9;
 }
+
+.disclaimer {
+    position: relative;
+    transform: rotate(-12.5deg);
+    left: 10vw;
+    margin-top: -5vh;
+    margin-bottom: 9vh;
+    font-size: 0.75em;
+    font-weight: 1;
+}
