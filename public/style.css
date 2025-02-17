@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@media screen and (max-width: 768px) {
+    .video-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .video-container iframe {
+        width: 95vw;
+        height: 400px;
+        display: none;
+    }
+
+    .video-container a {
+        display: initial;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .checkmarks {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .video-container a {
+        display: none;
+    }
+}
+
 body, html {
     background: rgba(231, 212, 202, 0.95) url("https://www.wvnstv.com/wp-content/uploads/sites/76/2023/03/GettyImages-846010444.jpg?w=2560&h=1440&crop=1");
     background-size: cover;
@@ -11,6 +43,7 @@ body, html {
     font-family: Carter One;
     margin: 0;
     font-size: 1.25em;
+    overflow-x: hidden;
 }
 
 .title {
