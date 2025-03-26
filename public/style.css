@@ -1,330 +1,181 @@
-@import "tailwindcss";
-
-@media screen and (max-width: 768px) {
-    .video-container {
-        padding: 0;
-        margin: 0;
-    }
-
-    .video-container iframe {
-        width: 95vw;
-        height: 400px;
-        display: none;
-    }
-
-    .video-container a {
-        display: initial;
-    }
-
-    .content {
-        padding: 0;
-    }
-
-    .checkmarks {
-        margin: 0;
-        padding: 0;
-    }
+:root{
+    --text-color:white;
+    --main-color:rgb(15, 180, 15);
+}
+body{
+   background-color: rgb(0, 0, 0);
+   color: var(--text-color);
+   font-family: monospace;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
-@media screen and (min-width: 768px) {
-    .video-container a {
-        display: none;
-    }
+#i1{
+    margin-left: -39px;
+    margin-top: -39px;
 }
-
-body, html {
-    background: rgba(231, 212, 202, 0.95) url("https://www.wvnstv.com/wp-content/uploads/sites/76/2023/03/GettyImages-846010444.jpg?w=2560&h=1440&crop=1");
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
-    text-align: center;
-    color: #6d412a;
-    font-family: Carter One;
-    margin: 0;
-    font-size: 1.25em;
-    overflow-x: hidden;
+#box{
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+height: 45px;
+margin-top: 14px;
+margin-left: 500px;
+width: 450px;
+top: -2px;
+display: flex;
+position: fixed;
+justify-content: center;
+align-items: center;
+z-index: 10;
 }
-
-.title {
-    font-size: 8vh;
-}
-
-.smore-image {
-    width: 90vw;
-    max-width: 1500px;
-}
-
-.leaf-border-left,
-.leaf-border-right {
-    position: fixed;
-    top: 0;
-    width: 130px;
-    height: 100%;
-    background: 
-    url('assets/leaf1.png') repeat-y center/contain,
-    url('assets/leaf2.png') repeat-y center/contain;
-    background-position: 0 0, 0 100px;
-    background-size: contain;
-    z-index: 0;
-    opacity: 0.8;
-    filter: saturate(2.5);
-}
-
-.leaf-border-left {
-    left: 0;
-}
-
-.leaf-border-right {
-    right: 0;
-}
-
-.content {
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-bottom: 5vh;
-    position: relative;
-    z-index: 2;
-}
-
-.checkmarks {
-    list-style: none;
-    margin: 0 auto 0 auto;
-    text-align: left;
-    width: fit-content;
-    padding: 0 100px;
-}
-
-.checkmarks li {
-    padding-left: 10px;
-}
-
-.checkmarks li::before {
-    content: "\2713";
-    width: 10px;
-    margin-left: -10px;
-    margin-right: 0.8em;
-    float: left;
-}
-
-.content .checkmarks li {
-    margin-bottom: 0.75em;
-}
-
-.log {
-    width: 80vw;
-    max-height: 50vh;
-}
-
-.photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 5vh auto;
-    position: relative;
-    z-index: 1;
-    min-height: 40vh;
-    border-radius: 15px;
-}
-
-.bulletin-container {
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 5vh auto;
-    position: relative;
-    background-image: url('https://media.istockphoto.com/id/472321898/photo/empty-cork-notice-board-texture-and-background.jpg?s=612x612&w=0&k=20&c=7KXzdbAfFyA8W1D4csmuBAZe_XFDSoERk8ayS8jxZtw=');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 2;
-    min-height: 40vh;
-    border-radius: 15px;
-    border: 5px solid #6d412a;
-}
-
-.bulletin-container h2 {
+#l1{
     color: white;
-    font-weight: 700;
-    font-family: Lato;
-}
-
-.photo-container a {
-    display: inline-block;
-    position: relative;
-    width: 200px;
-    height: 220px;
-    background: white;
-    padding: 10px 10px 30px 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.5s ease-out;
-    will-change: transform;
-    z-index: 2;
     text-decoration: none;
+    margin-left: 25%;
+    margin: 5%;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-.photo-container a::before {
-    content: '';
-    position: absolute;
-    width: 20px; 
-    height: 20px; 
-    background: #b03131;
-    top: -10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: circle(50%); 
+#l1:hover{
+    color: var(--main-color);
 }
-
-.photo-container a::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
-
-.photo-container a:nth-child(1) {
-    transform: rotate(-5deg) translateY(0);
-    background-size: cover; 
-}
-
-.photo-container a:nth-child(2) {
-    transform: rotate(2deg) translateY(20px);
-    background-size: cover; 
-}
-
-.photo-container a:nth-child(3) {
-    transform: rotate(3deg) translateY(0);
-    background-size: cover; 
-}
-
-.photo-container a:nth-child(1)::after {
-    background-image: url('assets/IMG_2185.jpg'); 
-    background-size: cover; 
-    background-position: center top;
-}
-
-.photo-container a:nth-child(2)::after {
-    background-image: url('assets/philmont.JPEG'); 
-    background-size: cover; 
-    background-position: center top;
-}
-
-.photo-container a:nth-child(3)::after {
-    background-image: url('assets/Scrapyard NoVA.png');
-    background-size: cover;
-    background-position: center top;
-}
-
-.photo-container a:hover {
-    transform: none;
-}
-
-.photo:nth-child(1):hover {
-    transform: none;
-}
-
-.photo:nth-child(2):hover {
-    transform: none;
-}
-
-.photo:nth-child(3):hover {
-    transform: none;
-}
-
-.photo-label {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+#l2{
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    text-align: center;
-    width: calc(100% - 20px);
-    word-wrap: break-word;
-    hyphens: auto;
-    line-height: 1.2;
+    margin: 3%;
+    text-decoration: none; 
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#l2:hover{
+    color: rgb(15, 180, 15);
+}
+#l3{
+    color: white;
+    text-decoration: none; 
+    font-size: 15px;
+    margin: 3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#l3:hover{
+    color: rgb(15, 180, 15);
+}
+#l4{
+    color: white;
+    text-decoration: none;  
+    margin-left: 5%;
+    background-color: rgb(15, 180, 15);
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* End */
+
+/* Logos belt 1 */
+.logos-slide img {
+    height: 220px;
+    padding: 0, 0;
+    margin: 1%;
 }
 
-@media screen and (max-width: 768px) {
-    .photo-label {
-        font-size: 0.75em;
-        padding: 4px 6px;
-        bottom: 5px;
+.logos-slide {
+    white-space: nowrap;
+    animation: 60s slide infinite linear;
+    background-color: black;
+}
+
+.logos {
+    margin-top: 2%;
+    background-color: rgb(0, 0, 0);
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
     }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+/* end */
+
+/* title section */
+#box2{
+    height: 150%;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    margin-top: -410px;
+    margin-left: 45%;
     
-    .photo-container {
-        gap: 20px;
-    }
-
-    .photo-label {
-        font-size: 0.75em;
-        max-width: 140px;
-    }
 }
-
-.steps-list {
-    margin: 0 auto 5vh;
-    padding: 0 50px;
-    width: 90%;
+#title{
+    font-size: 90px;
 }
-
-.steps-list li {
-    margin-bottom: 1.5em;
-    padding-left: 50px;
+#p{
+    font-size: 20px;
 }
-
-button {
-    background-color: #697F3E;
-    color: white;
-    padding: 10px 20px;
+#b2{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 115%;
+    background-color: rgb(15, 180, 15);
     border: none;
-    border-radius: 30px;
-    font-size: 1em;
-    cursor: pointer;
-    font-family: Lato;
-    font-weight: 600;
-}
-
-.video-container {
-    margin: 10vh 5vw 5vh 5vw;
-    padding: 20px;
-    max-width: 1200px;
-    max-width: 100%;
-    background-image: url('https://www.alltrails.com/_next/image?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjA0NDczMjMvNzBlNTA5MjAyM2YwYzZhYmE2YjkyOWVkYTdiOGUxYjMuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMDgwLCJoZWlnaHQiOjcwMCwiZml0IjoiY292ZXIifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0%3D&w=3840&q=90');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    border: 5px solid #2a6d31;
-    text-align: center;
     color: white;
+    border-radius: 5px;
 }
-
-.video-container h2 {
-    font-family: Lato;
-    font-weight: 700;
+/* End */
+#p2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 45px;
 }
+#e{
+    text-align: center;
+background: rgba(12, 102, 0, 0.42);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 2px solid rgba(12, 102, 0, 0.84);
 
-.video-container iframe {
-    width: 60%;
-    aspect-ratio: 16 / 9;
 }
-
-.disclaimer {
-    position: relative;
-    transform: rotate(-12.5deg);
-    left: 10vw;
-    margin-top: -5vh;
-    margin-bottom: 9vh;
-    font-size: 0.75em;
-    font-weight: 1;
+#img1{
+    width: 320px;
+    border-radius: 15px;
+    margin-left: -900px;
+    border: 5px rgba(12, 102, 0, 0.84) solid;
+}
+#it{
+    margin-left: -900px;
+}
+#img2{
+    width: 320px;
+    border-radius: 15px;
+    margin-left: -50px;
+    margin-top: -24%;
+    border: 5px rgba(12, 102, 0, 0.84) solid;
+}
+#it2{
+    margin-left: -60px;
+}
+#img3{
+    width: 320px;
+    border-radius: 15px;
+    margin-left: 800px;
+    margin-top: -24%;
+    border: 5px rgba(12, 102, 0, 0.84) solid;
+}
+#it3{
+    margin-left:780px;
 }
