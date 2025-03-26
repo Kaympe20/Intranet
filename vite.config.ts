@@ -33,7 +33,7 @@ export default defineConfig({
             // Specify all pages as per https://vite.dev/guide/build#multi-page-app
             input: {
                 index: resolve(__dirname, 'index.html'),
-                steps: resolve(__dirname, 'steps.html'),
+                steps: resolve(__dirname, 'join.html'),
             },
     },
 
