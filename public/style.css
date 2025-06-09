@@ -216,7 +216,7 @@ body, html {
 }
 
 .photo-container a:nth-child(3)::after {
-    background-image: url('assets/Scrapyard NoVA.png');
+    background-image: url('assets/1000047569.jpg');
     background-size: cover;
     background-position: center top;
 }
